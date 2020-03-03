@@ -1,14 +1,17 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace Verification_Tests
 {
-    [TestClass]
+    [TestFixture]
     public class Functional
     {
-        [TestMethod]
-        public void TestMethod1()
+        [Test]
+        public void TestTimerPositive()
         {
+            Route rt = new Route();
+
+            Assert.Positive(rt.createTimer());
         }
     }
 }
